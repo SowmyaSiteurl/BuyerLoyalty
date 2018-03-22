@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.IndividialVenderdata">
+
+
+    <item
+        android:id="@+id/QR_content"
+        android:title="QrCode"
+        android:icon="@drawable/qrscan"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/call_vendor"
+        android:title="Call"
+        android:icon="@drawable/ic_phone_black_24dp"
+        app:showAsAction="ifRoom"
+        />
+</menu>

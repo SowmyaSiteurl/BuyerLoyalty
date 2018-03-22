@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.IndivisualVendorDataWithOffers">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/actiontoolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <LinearLayout
+                android:id="@+id/detail_of_vendor_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:paddingBottom="6dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="9dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/vndr_emailtv1"
+                        android:text="Route Map" />
+
+                    <TextView
+                        android:id="@+id/vnder_nametv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="5dp"
+                        android:text="Name"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetext"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@+id/vnder_nametv2"
+                        android:gravity="right"
+                        android:text="text view"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetext" />
+
+                    <ImageView
+                        android:id="@+id/content_avatar"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_below="@id/vnder_nametv2"
+                        android:scaleType="centerCrop"
+                        android:src="@android:drawable/btn_star_big_on" />
+
+                    <TextView
+                        android:id="@+id/vndr_emailtv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/content_avatar"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/content_avatar"
+                        android:layout_toRightOf="@id/content_avatar"
+                        android:hint="Harshith "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetext" />
+
+                    <TextView
+                        android:id="@+id/vnder_addresstv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/vndr_emailtv1"
+                        android:layout_alignStart="@id/vndr_emailtv1"
+                        android:layout_below="@id/vndr_emailtv1"
+                        android:layout_marginBottom="-2dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginStart="3dp"
+                        android:hint="500k"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/whitetext" />
+
+
+                    <ImageView
+                        android:id="@+id/maproot"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_above="@+id/vnder_addresstv5"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:onClick="lookMap"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/getloc" />
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="9dp"
+                    android:src="@color/contentDividerLine" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/content_from_badge"
+                            style="@style/ContentMainBadgeTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="Address"
+                            android:textColor="@color/whitetext" />
+
+                        <TextView
+                            android:id="@+id/vnder_idtv4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/content_from_badge"
+                            android:layout_alignStart="@id/content_from_badge"
+                            android:layout_below="@id/content_from_badge"
+                            android:hint="Sept 09,2017"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/whitetext"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/content_to_badge"
+                            style="@style/ContentMainBadgeTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="Contact"
+                            android:textColor="@color/whitetext" />
+
+                        <TextView
+                            android:id="@+id/vnder_contacttv6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/content_to_badge"
+                            android:layout_alignStart="@id/content_to_badge"
+                            android:layout_below="@id/content_to_badge"
+                            android:hint="Dec 09,2017"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/whitetext"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/content_delivery_date_badge"
+                            style="@style/ContentMainBadgeTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="call back time" />
+
+                        <TextView
+                            android:id="@+id/tv7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/content_delivery_date_badge"
+                            android:layout_alignStart="@id/content_delivery_date_badge"
+                            android:layout_below="@id/content_delivery_date_badge"
+                            android:text="Aug 09,2017"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/content_delivery_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/tv7"
+                            android:layout_alignStart="@id/tv7"
+                            android:layout_below="@id/tv7"
+                            android:text="myosre"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/content_deadline_badge"
+                            style="@style/ContentMainBadgeTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="Next visit time" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="9dp"
+                android:src="@color/contentDividerLine"
+                android:visibility="gone" />
+
+
+            <!--<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/relative1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp">
+
+                            <TextView
+                                android:id="@+id/offerName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="xxx" />
+
+                            <ImageView
+                                android:id="@+id/image"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_below="@+id/offerName"
+                                android:layout_centerHorizontal="true"
+                                android:src="@mipmap/ic_launcher" />
+
+                            <TextView
+                                android:id="@+id/offerPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image"
+                                android:layout_centerHorizontal="true"
+                                android:text="1500/-" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </RelativeLayout>-->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Vendor Offers"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/whitetext"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:id="@+id/product_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <SearchView
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:queryHint="Search Product">
+
+                </SearchView>
+
+                <EditText
+                    android:id="@+id/myFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:ems="10"
+                    android:hint="search here"
+                    android:visibility="gone">
+
+                    <requestFocus />
+                </EditText>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/noOffers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="No Offers"
+                android:textColor="@color/whitetext"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/swipe_refresh_layout_vendor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ListView
+                    android:id="@+id/listView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/myFilter">
+
+                </ListView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

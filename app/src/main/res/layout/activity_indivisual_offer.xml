@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border"
+    android:orientation="vertical"
+    tools:context="in.siteurl.www.buyerloyalty.activities.IndivisualOffer"
+    tools:ignore="InvalidId">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/actiontoolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <LinearLayout
+                android:id="@+id/detail_of_vendor_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:paddingBottom="6dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="9dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/particularOfferName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="5dp"
+                        android:text="Name"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetext"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/particularOfferEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/particularOfferName"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:hint="Harshith "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetext" />
+
+                    <TextView
+                        android:id="@+id/particularOfferAdderess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/particularOfferEmail"
+                        android:layout_alignStart="@id/particularOfferEmail"
+                        android:layout_below="@id/particularOfferEmail"
+                        android:layout_marginBottom="-2dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginStart="3dp"
+                        android:hint="500k"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/whitetext" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="9dp"
+                    android:src="@color/contentDividerLine" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/Offerimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/Offername"
+                    android:layout_marginTop="24dp"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/Offername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingBottom="10dp"
+                    android:text="5"
+                    android:textColor="@color/whitetext"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Offerdescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/Offername"
+                    android:text="prod_description"
+                    android:textColor="@color/whitetext" />
+
+
+                <ImageView
+                    android:id="@+id/newOfferimage"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/newoffer"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/OfferendingSoon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ending"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/Offerexpired"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/expiry"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/Offershop_now1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/ic_phone_black_24dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/Offercalltv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/Offershop_now1"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginRight="11dp"
+                    android:text="call now"
+                    android:textColor="@color/whitetext"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+
+                <ImageView
+                    android:id="@+id/Offergps_show1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/OfferExpirydate"
+                    android:layout_alignStart="@+id/OfferExpirydate"
+                    android:layout_below="@+id/OfferPrice"
+                    android:background="@drawable/ic_home_black_24dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/Offergpstv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/Offergps_show1"
+                    android:layout_alignStart="@+id/Offergps_show1"
+                    android:layout_below="@+id/Offergps_show1"
+                    android:text="location"
+                    android:textColor="@color/whitetext"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/OffertermsandconditionTV1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/OfferPrice"
+                    android:layout_toEndOf="@+id/imageView4"
+                    android:layout_toRightOf="@+id/imageView4"
+                    android:text="terms_and_condition"
+                    android:textColor="@color/whitetext" />
+
+
+                <TextView
+                    android:id="@+id/OfferPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingBottom="10dp"
+                    android:text="$150"
+                    android:textColor="@color/whitetext"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Offerdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Expiry Date"
+                    android:textColor="@color/whitetext" />
+
+                <TextView
+                    android:id="@+id/OfferExpirydate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/Offerdate"
+                    android:layout_alignStart="@+id/Offerdate"
+                    android:layout_below="@+id/Offerdate"
+                    android:paddingBottom="10dp"
+                    android:text="50"
+                    android:textColor="@color/whitetext"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

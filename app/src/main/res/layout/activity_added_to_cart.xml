@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.AddedToCart">
+
+    <include layout="@layout/actiontoolbar" />
+
+
+    <RelativeLayout
+        android:id="@+id/cartLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <SearchView
+            android:id="@+id/searchCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:queryHint="search cart products">
+
+        </SearchView>
+
+        <EditText
+            android:id="@+id/searchFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:ems="10"
+            android:hint="search here"
+            android:visibility="gone">
+
+            <requestFocus />
+        </EditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/noItemsCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="No Items found in the Cart"
+            android:textColor="@color/whitetext"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <ListView
+            android:id="@+id/SearchListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp">
+
+        </ListView>
+
+
+        <LinearLayout
+            android:id="@+id/cartProceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginRight="18dp">
+
+                <!--  <Button
+                      android:id="@+id/procedCart"
+                      android:layout_width="80dp"
+                      android:layout_height="50dp"
+                      android:layout_centerHorizontal="true"
+                      android:layout_gravity="center"
+                      android:background="@drawable/ic_check_circle_black_24dp" />
+  -->
+
+
+                <Button
+                    android:id="@+id/proceddCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_color_change_selectors"
+                    android:letterSpacing="0.025"
+                    android:padding="10dp"
+                    android:text="Redeem Now"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    android:textSize="16dp" />
+
+                <!--<TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/procedCart"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:text="shop now"
+                    android:textColor="@color/whitetext" />-->
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "19646267482",
+    "firebase_url": "https://trendz-loyalty-buyer-app.firebaseio.com",
+    "project_id": "trendz-loyalty-buyer-app",
+    "storage_bucket": "trendz-loyalty-buyer-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19646267482:android:5aa08af6b5421bf4",
+        "android_client_info": {
+          "package_name": "in.siteurl.www.buyerloyalty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "19646267482-of237n0kt73nhdh0ki9q8pi7660eccht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp99sSVLGguMGPj14r67OssayuXbkAviM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

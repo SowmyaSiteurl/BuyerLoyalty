@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_nature_people_black_24dp"
+        android:id="@+id/nav_Vendors"
+        android:title="Vendors"/>
+
+    <item
+        android:icon="@drawable/ic_grade_black_24dp"
+        android:id="@+id/nav_Points"
+        android:title="Points History"/>
+
+    <item
+        android:icon="@drawable/ic_add_shopping_cart_white_24dp"
+        android:id="@+id/nav_Cart"
+        android:title="Redemption Cart"/>
+
+    <item
+        android:icon="@drawable/ic_history_black_24dp"
+        android:id="@+id/nav_purchasehistory"
+        android:title="Transaction History"/>
+
+    <item
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:id="@+id/nav_Redeemed"
+        android:title="Redeem Points"/>
+
+    <item
+        android:icon="@drawable/ic_build_black_24dp"
+        android:id="@+id/nav_changepassword"
+        android:title="Change Password"/>
+
+    <item
+        android:icon="@drawable/ic_perm_identity_black_24dp"
+        android:id="@+id/nav_profile"
+        android:title="Profile"/>
+
+    <item
+        android:icon="@drawable/ic_power_settings_new_white_24dp"
+        android:id="@+id/nav_logout"
+        android:title="Logout"/>
+
+</menu>

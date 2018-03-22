@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.IndivisualVendorDataWithOffers">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar1"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <!-- <ImageView
+                     android:id="@+id/call_vendor1"
+                     android:layout_width="32dp"
+                     android:layout_height="32dp"
+                     android:layout_gravity="center_horizontal"
+                     android:src="@drawable/ic_phone_black_24dp" />
+
+                 <ImageView
+                     android:id="@+id/QR_content1"
+                     android:layout_width="32dp"
+                     android:layout_height="32dp"
+                     android:layout_gravity="end"
+                     android:src="@drawable/qrscan" />-->
+
+            </android.support.v7.widget.Toolbar>
+
+            <RelativeLayout
+                android:id="@+id/vendorDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar1"
+                android:gravity="bottom">
+
+                <!-- <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentEnd="true"
+                     android:layout_alignParentRight="true"
+                     android:layout_below="@+id/svndr_emailtv1"
+                     android:text="Route Map" />-->
+
+                <TextView
+                    android:id="@+id/svnder_nametv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/whitetext"
+                    android:textStyle="bold" />
+
+
+                <!-- <ImageView
+                     android:id="@+id/scontent_avatar"
+                     android:layout_width="32dp"
+                     android:layout_height="32dp"
+                     android:layout_below="@id/svnder_nametv2"
+                     android:scaleType="centerCrop"
+                     android:src="@android:drawable/btn_star_big_on" />-->
+
+                <TextView
+                    android:id="@+id/svndr_emailtv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/svnder_nametv2"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:hint=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/whitetext" />
+
+                <TextView
+                    android:id="@+id/svnder_addresstv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/svndr_emailtv1"
+                    android:layout_alignStart="@id/svndr_emailtv1"
+                    android:layout_below="@id/svndr_emailtv1"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginStart="3dp"
+                    android:hint=""
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/whitetext" />
+
+
+                <ImageView
+                    android:id="@+id/smaproot"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_above="@+id/svnder_addresstv5"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/whitetext"
+                    android:onClick="lookMap"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_black_24dp" />
+
+
+                <TextView
+                    android:id="@+id/stv11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/svnder_addresstv5"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/whitetext" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/content_from_badge"
+                        style="@style/ContentMainBadgeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text="Address"
+                        android:textColor="@color/whitetext" />
+
+                    <TextView
+                        android:id="@+id/vnder_idtv41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/content_from_badge"
+                        android:layout_alignStart="@id/content_from_badge"
+                        android:layout_below="@id/content_from_badge"
+                        android:hint="Sept 09,2017"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetext"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/content_to_badge"
+                        style="@style/ContentMainBadgeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text="Contact"
+                        android:textColor="@color/whitetext" />
+
+                    <TextView
+                        android:id="@+id/vnder_contacttv61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/content_to_badge"
+                        android:layout_alignStart="@id/content_to_badge"
+                        android:layout_below="@id/content_to_badge"
+                        android:hint="Dec 09,2017"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/whitetext"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/content_delivery_date_badge"
+                        style="@style/ContentMainBadgeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text="call back time" />
+
+                    <TextView
+                        android:id="@+id/tv7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/content_delivery_date_badge"
+                        android:layout_alignStart="@id/content_delivery_date_badge"
+                        android:layout_below="@id/content_delivery_date_badge"
+                        android:text="Aug 09,2017"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/content_delivery_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/tv7"
+                        android:layout_alignStart="@id/tv7"
+                        android:layout_below="@id/tv7"
+                        android:text="myosre"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/content_deadline_badge"
+                        style="@style/ContentMainBadgeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text="Next visit time" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="9dp"
+                android:src="@color/contentDividerLine"
+                android:visibility="gone" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!--  app:layout_anchor="@id/horizontalScrollView1"
+      app:layout_anchorGravity="bottom"
+  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Vendor Offers"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/whitetext"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/product_ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <SearchView
+                android:id="@+id/searchVendorswithOffers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:queryHint="Search here">
+
+            </SearchView>
+
+            <EditText
+                android:id="@+id/filterVendorswithOffers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:ems="10"
+                android:hint="search here"
+                android:visibility="gone">
+
+                <requestFocus />
+            </EditText>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/noOffers1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="No Offers"
+            android:textColor="@color/whitetext"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/vendor_offers"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+
+        <!--<LinearLayout
+            android:id="@+id/liner_layout_news_sliding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/news_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp">
+
+                </android.support.v4.view.ViewPager>
+
+        </LinearLayout>-->
+
+
+        <!-- <HorizontalScrollView
+             android:id="@+id/horizontalScrollView1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:fillViewport="true">
+
+             <LinearLayout
+                 android:id="@+id/scroll"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="10dp"
+                 android:orientation="horizontal">
+
+                 &lt;!&ndash;<RelativeLayout
+                     android:id="@+id/relative1"
+                     android:layout_width="100dp"
+                     android:layout_height="100dp">
+
+                     <TextView
+                         android:id="@+id/offerName"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerHorizontal="true"
+                         android:text="xxx" />
+
+                     <ImageView
+                         android:id="@+id/image"
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:layout_below="@+id/offerName"
+                         android:layout_centerHorizontal="true"
+                         android:src="@mipmap/ic_launcher" />
+
+                     <TextView
+                         android:id="@+id/offerPrice"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/image"
+                         android:layout_centerHorizontal="true"
+                         android:text="1500/-" />
+                 </RelativeLayout>&ndash;&gt;
+
+             </LinearLayout>
+         </HorizontalScrollView>-->
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
